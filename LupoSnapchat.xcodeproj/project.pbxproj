@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8B6DBBD2CC9A431007C0DF3 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6DBBC2CC9A431007C0DF3 /* SnapsViewController.swift */; };
+		B8B6DBBF2CC9A7B3007C0DF3 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6DBBE2CC9A7B3007C0DF3 /* ImagenViewController.swift */; };
+		B8B6DBC12CC9B3F9007C0DF3 /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6DBC02CC9B3F9007C0DF3 /* ElegirUsuarioViewController.swift */; };
+		B8B6DBC72CC9B8F6007C0DF3 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6DBC62CC9B8F6007C0DF3 /* Usuario.swift */; };
+		B8B6DBC92CC9C2EE007C0DF3 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6DBC82CC9C2EE007C0DF3 /* RegistroViewController.swift */; };
 		CE87470F2CC078A50063063E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87470E2CC078A50063063E /* AppDelegate.swift */; };
 		CE8747112CC078A50063063E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8747102CC078A50063063E /* SceneDelegate.swift */; };
 		CE8747132CC078A50063063E /* IniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8747122CC078A50063063E /* IniciarSesionViewController.swift */; };
@@ -25,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8B6DBBC2CC9A431007C0DF3 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		B8B6DBBE2CC9A7B3007C0DF3 /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
+		B8B6DBC02CC9B3F9007C0DF3 /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
+		B8B6DBC62CC9B8F6007C0DF3 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		B8B6DBC82CC9C2EE007C0DF3 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		CE87470B2CC078A50063063E /* LupoSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LupoSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE87470E2CC078A50063063E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8747102CC078A50063063E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +65,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8B6DBC42CC9B897007C0DF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8747122CC078A50063063E /* IniciarSesionViewController.swift */,
+				B8B6DBBC2CC9A431007C0DF3 /* SnapsViewController.swift */,
+				B8B6DBC02CC9B3F9007C0DF3 /* ElegirUsuarioViewController.swift */,
+				B8B6DBBE2CC9A7B3007C0DF3 /* ImagenViewController.swift */,
+				B8B6DBC82CC9C2EE007C0DF3 /* RegistroViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B8B6DBC52CC9B8C2007C0DF3 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				B8B6DBC62CC9B8F6007C0DF3 /* Usuario.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
 		CE8747022CC078A40063063E = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +104,10 @@
 		CE87470D2CC078A50063063E /* LupoSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				B8B6DBC52CC9B8C2007C0DF3 /* Modelos */,
+				B8B6DBC42CC9B897007C0DF3 /* ViewControllers */,
 				CE87470E2CC078A50063063E /* AppDelegate.swift */,
 				CE8747102CC078A50063063E /* SceneDelegate.swift */,
-				CE8747122CC078A50063063E /* IniciarSesionViewController.swift */,
 				CE8747142CC078A50063063E /* Main.storyboard */,
 				CE8747372CC08EC40063063E /* GoogleService-Info.plist */,
 				CE87471A2CC078A70063063E /* Assets.xcassets */,
@@ -172,9 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B6DBC72CC9B8F6007C0DF3 /* Usuario.swift in Sources */,
+				B8B6DBC12CC9B3F9007C0DF3 /* ElegirUsuarioViewController.swift in Sources */,
+				B8B6DBBD2CC9A431007C0DF3 /* SnapsViewController.swift in Sources */,
 				CE8747132CC078A50063063E /* IniciarSesionViewController.swift in Sources */,
 				CE87470F2CC078A50063063E /* AppDelegate.swift in Sources */,
+				B8B6DBBF2CC9A7B3007C0DF3 /* ImagenViewController.swift in Sources */,
 				CE8747112CC078A50063063E /* SceneDelegate.swift in Sources */,
+				B8B6DBC92CC9C2EE007C0DF3 /* RegistroViewController.swift in Sources */,
 				CE8747192CC078A50063063E /* LupoSnapchat.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,14 +19,42 @@ class IniciarSesionViewController: UIViewController {
         GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: FirebaseApp.app()?.options.clientID ?? "")
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func IniciarSesion(_ sender: Any) {
-        Auth.auth().signIn(withEmail: usuariotxt.text!, password: contrasenatxt.text! ){ (user, error) in
-            print("Intentando iniciar sesion")
-            if error != nil{
-                print("Se presento un error: \(error)")
-            }else{
-                print("Inicio de sesion exitoso")
+        Auth.auth().signIn(withEmail: usuariotxt.text!, password: contrasenatxt.text!) { (user, error) in
+            print("Intentando iniciar sesión")
+            if let error = error {
+                print("Se presentó un error: \(error.localizedDescription)")
+                
+                // Mostrar alerta para crear un nuevo usuario
+                let alerta = UIAlertController(title: "Usuario no encontrado", message: "El usuario no existe. ¿Deseas crear uno?", preferredStyle: .alert)
+                let btnCrear = UIAlertAction(title: "Crear", style: .default) { (action) in
+                    self.performSegue(withIdentifier: "goToRegister", sender: nil)
+                }
+                let btnCancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+                
+                alerta.addAction(btnCrear)
+                alerta.addAction(btnCancelar)
+                self.present(alerta, animated: true, completion: nil)
+                
+            } else {
+                print("Inicio de sesión exitoso")
+                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToRegister" {
+            if let destinationVC = segue.destination as? RegistroViewController {
+                destinationVC.email = usuariotxt.text
+            }
+        }
+    }
+    
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+        if let sourceVC = segue.source as? RegistroViewController {
+            self.usuariotxt.text = sourceVC.correotxt.text
         }
     }
     @IBAction func IniciarGoogle(_ sender: Any) {
